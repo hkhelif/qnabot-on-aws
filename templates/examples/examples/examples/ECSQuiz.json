@@ -1,0 +1,95 @@
+{
+    "qna": [
+      {
+        "qid": "ExampleQuiz.5",
+        "question": "A cluster has 3 instances launched from 3 subnets in different availability zones. A service is created with desired number of tasks as 3. How does the service scheduler place the tasks on the instances by default?",
+        "correctAnswers": [
+          "From the list of eligible instances, the ECS Scheduler uses binpack(memory) to determine the instance on which the task has to be placed."
+        ],
+        "incorrectAnswers": [
+          "From the list of eligible instances, the ECS Scheduler uses the spread(availability-zone), and spread(instance-id) to determine the instance on which the task has to be placed.",
+          "From the list of eligible instances, the ECS Scheduler uses distinctInstance to determine the instance on which the task has to be placed.",
+          " From the list of eligible instances, the ECS Scheduler uses the spread(availability-zone) and binpack(memory) to determine the instance on which the task has to be placed."
+        ],
+        "responses": {
+          "correct": "I like your style.",
+          "incorrect": "You'll get 'em next time, slugger.",
+          "end": ""
+        },
+        "next": [
+          "ExampleQuiz.6"
+        ],
+        "r": {
+          "title": "Hint",
+          "subTitle": "",
+          "imageUrl": "https://raw.githubusercontent.com/aws-solutions/qnabot-on-aws/develop/assets/examples/photos/klimage.jpg"
+        },
+        "quiz": "",
+        "type": "quiz",
+        "q": [],
+        "t": ""
+      },
+      {
+        "qid": "QuizEntry",
+        "a": "Starting the example quiz!",
+        "l": "QNA:ExampleJSLambdaQuiz",
+        "args": [
+          "ExampleQuiz.4"
+        ],
+        "type": "qna",
+        "q": [
+          "Start the ECS quiz.",
+          "Take the ECS quiz."
+        ]
+      },
+      {
+        "qid": "ExampleQuiz.4",
+        "question": "I am launching tasks within a service using the awsvpc network mode, the instance type being used is c5n.xlarge awsvpctrunking is enabled on this account. What is the maximum number of tasks that I can run on this instance?",
+        "correctAnswers": [
+          "5"
+        ],
+        "incorrectAnswers": [
+          "3",
+          "1000",
+          "9"
+        ],
+        "next": [
+          "ExampleQuiz.5"
+        ],
+        "q": [],
+        "type": "quiz"
+      },
+      {
+        "qid": "ExampleQuiz.6",
+        "question": "In order to check the requests made using the credentialsProvider when the containers are using the task role which log file can you check? Where can you find this log file?",
+        "correctAnswers": [
+          "/var/log/ecs/ecs-agent.log, on the host container instance",
+          "/var/log/ecs/audit.log.YYYY-MM-DD-HH, on the host container instance",
+        ],
+        "incorrectAnswers": [
+          "/var/log/ecs/auditlog.YY-MM-DD-HH, on the host container instance",
+          "/var/log/ecs/audit.log.YYYY-MM-DD-HH, on the container running the application",
+          "None"
+        ],
+        "responses": {
+          "correct": "And knowing is half the battle!",
+          "incorrect": "And knowing is half the battle!",
+          "end": "See you later, friend!"
+        },
+        "next": [
+          ""
+        ],
+        "r": {
+          "title": "",
+          "subTitle": "",
+          "imageUrl": "",
+          "text": "",
+          "url": ""
+        },
+        "quiz": "",
+        "type": "quiz",
+        "q": [],
+        "t": ""
+      }
+    ]
+  }
